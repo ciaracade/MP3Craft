@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "mp3craft",
+  "version": "1.0-SNAPSHOT",
+  "name": "MP3Craft",
+  "description": "💿 A Minecraft mod that let's players add MP3 files to the game and burn them on discs to be played in-game.",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/mp3craft/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.ciaracade.mp3craft.client.Mp3craftClient"
+    ],
+    "main": [
+      "com.ciaracade.mp3craft.Mp3craft"
+    ]
+  },
+  "mixins": [
+    "mp3craft.mixins.json",
+    {
+      "config": "mp3craft.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.5",
+    "fabric": "*",
+    "minecraft": "1.21.1"
+  }
+}
